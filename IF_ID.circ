@@ -23,8 +23,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </options>
   <mappings>
     <tool lib="6" map="Button2" name="Menu Tool"/>
-    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
     <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
     <tool lib="6" name="Poke Tool"/>
@@ -54,8 +54,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(200,170)" to="(230,170)"/>
-    <wire from="(230,240)" to="(230,270)"/>
+    <wire from="(80,270)" to="(80,290)"/>
     <wire from="(250,220)" to="(300,220)"/>
+    <wire from="(230,240)" to="(230,270)"/>
     <wire from="(180,140)" to="(220,140)"/>
     <wire from="(200,170)" to="(200,270)"/>
     <wire from="(130,270)" to="(200,270)"/>
@@ -64,17 +65,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(200,270)" to="(230,270)"/>
     <wire from="(80,270)" to="(100,270)"/>
     <wire from="(150,220)" to="(220,220)"/>
-    <comp lib="0" loc="(150,220)" name="Pin">
+    <comp lib="4" loc="(250,220)" name="Register">
       <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Clock Data"/>
     </comp>
-    <comp lib="0" loc="(80,270)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Clock"/>
-    </comp>
-    <comp lib="4" loc="(250,140)" name="Register">
+    <comp lib="0" loc="(180,140)" name="Pin">
       <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Instructions Data"/>
     </comp>
     <comp lib="0" loc="(290,140)" name="Pin">
       <a name="facing" val="west"/>
@@ -83,7 +80,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Instructions Data"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(130,270)" name="NOT Gate"/>
+    <comp lib="4" loc="(250,140)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(80,290)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Clock"/>
+    </comp>
     <comp lib="0" loc="(300,220)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -91,13 +95,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Clock Data"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(180,140)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Instructions Data"/>
-    </comp>
-    <comp lib="4" loc="(250,220)" name="Register">
+    <comp lib="0" loc="(150,220)" name="Pin">
       <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Clock Data"/>
     </comp>
+    <comp lib="1" loc="(130,270)" name="NOT Gate"/>
   </circuit>
 </project>
